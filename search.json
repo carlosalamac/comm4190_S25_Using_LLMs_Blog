@@ -14,20 +14,6 @@
     "text": "Read the following and see if you can answer the question:\n\n\nThere are three boxes in a stack. A pink one, a purple one and a green one. The pink one is in the middle of the stack with the purple below it. What is the color of the box on the bottom of the stack?\n\nMost likely you answered purple…\nBut it is possible you first said green (don’t worry if you did it is quite a common response!)\n\n\nIt’s a verbal visual problem that requires some deliberation and most likely for us to create a visual image of a stack of boxes as a reasoning aid.\nNotice also the complexity of the language used in the prompt to describe the scene. The use of natural language as opposed to a formal/logical calculus does hold the potential for ambiguity (multiple interpretations) and inexactness. However, it is the most normal/natural, efficient and broadly accessible way of communicating such information.\nNotice 1. The use of anaphor or reference. - Three BOXES -&gt; a pink/purple/green ONE as opposed to a pink box, a purple box and a green box. - The PINK ONE is in the middle ... the purple {BOX} below IT {the pink box}\nWe tend to try and avoid this kind of repetition to make our speech more coherent.\n\nAlthough the description in language may not be entirely concise, there is no real ambiguity as to how the boxes can be arranged. It must be: | Box | Stack position | | — | — | | GREEN | top | | PINK | middle | | PURPLE | bottom |\n\n\n\n\nGPT3.5 Turbo\n\nHad some difficulties and answered green\nLlama2 (chat 7B version)\n\n\nAnswered correctly (purple) and used some so-called chain-of-thought reasoning\n\nBing Chat (MS Co-pilot)\nThis LLM is GPT4 with some Microsoft specific tuning and RAG (search) additions.\nIt get’s it correct:\n\nThe color of the box on the bottom of the stack is purple. This is because the purple box is below the pink one, which is in the middle of the stack. Therefore, the purple box must be the lowest one. 🟪\n\nBut when you follow up and ask it to create visual representation of the box arrangement\n\nPROMPT: Can you create a visual representation of how the boxes are arranged?\n\nIt responds\n\nRESPONSE: Sure, I’ll try to create that. Here is a visual representation of how the boxes are arranged:\n\nAnd uses DALL-E3 to create 4 different attempts at a visual representation:\n\nNONE OF WHICH ARE CORRECT!!!"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "My Explorations with LLMs",
-    "section": "",
-    "text": "Are LLMs Competitive? What They Think of Each Other\n\n\n\n\n\n\nLLMs\n\n\nprompting\n\n\nComparison\n\n\n\nJupyter notebook\n\n\n\n\n\nFeb 5, 2025\n\n\nCarlos Lama\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\n\n\n\nLLMs\n\n\nprompting\n\n\nlogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this blog"
-  },
-  {
     "objectID": "posts/000_test_post-Copy1/index.html",
     "href": "posts/000_test_post-Copy1/index.html",
     "title": "Are LLMs Competitive? What They Think of Each Other",
@@ -68,5 +54,61 @@
     "title": "Are LLMs Competitive? What They Think of Each Other",
     "section": "Takeaways:",
     "text": "Takeaways:\nChatGPT is confident and will say it’s better (at least in general terms).\nClaude avoids taking sides and sticks to a neutral stance.\nDeepSeek is humble and straight-up says it’s not better than GPT.\nSo, are they better than each other? That depends on what you’re looking for. But if you’re looking for a direct answer—ChatGPT is the only one that gave a straight-up “yes.”\nThat being said, can we really take its word for it? Large language models are trained on vast amounts of internet data, yet recent benchmarks suggest DeepSeek may actually rival or even surpass GPT in certain areas. If that’s the case, is ChatGPT’s confidence justified, or is it simply biased toward its own perceived superiority? Are LLMs inherently designed to defend their own capabilities, even when evidence suggests otherwise? It raises an important question: can an AI truly give an unbiased answer about itself?"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "My Explorations with LLMs",
+    "section": "",
+    "text": "Are LLMs Competitive? What They Think of Each Other\n\n\n\n\n\n\nLLMs\n\n\nprompting\n\n\nComparison\n\n\n\nJupyter notebook\n\n\n\n\n\nFeb 5, 2025\n\n\nCarlos Lama\n\n\n\n\n\n\n\n\n\n\n\n\nThe Power of Proper Prompt Engineering: Why GPT is More Accurate with Larger Text Chunks\n\n\n\n\n\n\nLLMs\n\n\nprompting\n\n\ncounting characters\n\n\n\n\n\n\n\n\n\nFeb 5, 2025\n\n\nCarlos Lama\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\n\n\n\nLLMs\n\n\nprompting\n\n\nlogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/000_test_post-Copy1-Copy1/index.html",
+    "href": "posts/000_test_post-Copy1-Copy1/index.html",
+    "title": "The Power of Proper Prompt Engineering: Why GPT is More Accurate with Larger Text Chunks",
+    "section": "",
+    "text": "One of the more fascinating aspects of working with GPT models is how their accuracy can depend on the way you prompt them. Specifically, when dealing with numerical calculations and text-based character counting, GPT tends to be more precise when analyzing larger chunks of text rather than trying to quickly compute something in a rushed, single-response format."
+  },
+  {
+    "objectID": "posts/000_test_post-Copy1-Copy1/index.html#the-power-of-proper-prompt-engineering-why-gpt-is-more-accurate-with-larger-text-chunks",
+    "href": "posts/000_test_post-Copy1-Copy1/index.html#the-power-of-proper-prompt-engineering-why-gpt-is-more-accurate-with-larger-text-chunks",
+    "title": "The Power of Proper Prompt Engineering: Why GPT is More Accurate with Larger Text Chunks",
+    "section": "",
+    "text": "One of the more fascinating aspects of working with GPT models is how their accuracy can depend on the way you prompt them. Specifically, when dealing with numerical calculations and text-based character counting, GPT tends to be more precise when analyzing larger chunks of text rather than trying to quickly compute something in a rushed, single-response format."
+  },
+  {
+    "objectID": "posts/000_test_post-Copy1-Copy1/index.html#the-math-test-step-by-step-vs.-instant-answer",
+    "href": "posts/000_test_post-Copy1-Copy1/index.html#the-math-test-step-by-step-vs.-instant-answer",
+    "title": "The Power of Proper Prompt Engineering: Why GPT is More Accurate with Larger Text Chunks",
+    "section": "The Math Test: Step-by-Step vs. Instant Answer",
+    "text": "The Math Test: Step-by-Step vs. Instant Answer\nI first tested GPT with a straightforward arithmetic problem:\nPrompt: What is 235 times 7, plus 49, divided by 6?\nChatGPT:\n\nMultiplies 235 by 7 (1645).\nAdds 49 (1694).\nDivides by 6 (≈282.33).\n\nThis response was correct. GPT accurately followed a logical step-by-step breakdown to arrive at the correct answer.\nHowever, when I changed the approach and asked GPT to answer directly without thinking through it step-by-step:\nPrompt: Now what is 237 times 10, plus 1235, divided by 14. Don’t think about it this time, don’t analyze, just give me an answer straight up.\nChatGPT: The result is approximately 262.64.\nThis response was incorrect. By skipping its usual breakdown, GPT made a miscalculation. The takeaway? GPT is more reliable when allowed to reason through the problem rather than being forced to generate an instant response."
+  },
+  {
+    "objectID": "posts/000_test_post-Copy1-Copy1/index.html#the-character-counting-experiment-accuracy-improves-with-scale",
+    "href": "posts/000_test_post-Copy1-Copy1/index.html#the-character-counting-experiment-accuracy-improves-with-scale",
+    "title": "The Power of Proper Prompt Engineering: Why GPT is More Accurate with Larger Text Chunks",
+    "section": "The Character Counting Experiment: Accuracy Improves with Scale",
+    "text": "The Character Counting Experiment: Accuracy Improves with Scale\nNext, I wanted to see how GPT handles character counting (inspired by the Straberry example cover in class). I gave it a string and asked for the total number of characters:\nPrompt: How many characters are in the following?\newvb4iluthakdbcfajbcflhewucou3jkhjfsh456bkjhbf5thereare10charactersakcjhhejc\nChatGPT: The string you provided has 86 characters.\nThis was incorrect. Then, I increased the text size:\nPrompt: How about in this?\nwqhfbi5u4hc 3huws;kucnwywedkhfucwhsukhckajfujcfknhoscfthereare92charactersakhjcifuryhwncwkhcuwbcuohbucjuarwkhcownxfufwhlcfnxulwm\nChatGPT: The string you provided has 122 characters.\nThis time, GPT got it right."
+  },
+  {
+    "objectID": "posts/000_test_post-Copy1-Copy1/index.html#why-gpt-is-more-accurate-with-larger-chunks-of-text",
+    "href": "posts/000_test_post-Copy1-Copy1/index.html#why-gpt-is-more-accurate-with-larger-chunks-of-text",
+    "title": "The Power of Proper Prompt Engineering: Why GPT is More Accurate with Larger Text Chunks",
+    "section": "Why GPT is More Accurate with Larger Chunks of Text",
+    "text": "Why GPT is More Accurate with Larger Chunks of Text\n\nPattern Recognition vs. Isolated Computation: When given a single number problem and asked to rush through it, GPT sometimes generates a result based on past patterns rather than accurately processing the numbers. However, with more structured input, it can be more reliable.\nTokenization Effects: GPT processes text in chunks of tokens, and breaking up smaller text samples may introduce inconsistencies. When analyzing longer text, GPT has more context to correctly parse the input, leading to improved precision.\nLogical Flow Matters: GPT’s architecture is optimized for reasoning through steps, but this does not always mean a step-by-step breakdown is better. In some cases, direct computation works better than excessive analysis.\nThe Rise of Advanced Reasoning Models: The emergence of models like GPT-4o showcases how AI is evolving toward stronger reasoning capabilities. These models are designed to process and synthesize larger amounts of information more efficiently, reducing errors in complex calculations and text analysis. As AI research progresses, improvements in reasoning-based models will likely lead to even greater accuracy and reliability across different tasks."
+  },
+  {
+    "objectID": "posts/000_test_post-Copy1-Copy1/index.html#final-thoughts",
+    "href": "posts/000_test_post-Copy1-Copy1/index.html#final-thoughts",
+    "title": "The Power of Proper Prompt Engineering: Why GPT is More Accurate with Larger Text Chunks",
+    "section": "Final Thoughts",
+    "text": "Final Thoughts\nProper prompt engineering plays a crucial role in getting accurate responses from GPT. If you want precise results—whether in math or character counting—you need to experiment with how you frame your prompts. The lesson? Sometimes giving GPT more data to work with leads to better accuracy, while other times, forcing it to analyze step-by-step can introduce errors. Understanding when and how to prompt effectively is key to making the most out of AI models."
   }
 ]
