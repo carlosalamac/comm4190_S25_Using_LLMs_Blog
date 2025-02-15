@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Carlos Lama">
+<meta name="dcterms.date" content="2024-02-15">
+<meta name="description" content="One of the most fascinating aspects of large language models (LLMs) like GPT-4 is their ability to interpret and respond to prompts. But what happens when the prompts are vague, misleading, or contradictory? Do AI models attempt to guess the user’s intent, or do they get confused? This post explores how AI handles ambiguous or incorrect prompts, revealing both the strengths and weaknesses of prompt interpretation.">
 
-<title>My Explorations with LLMs</title>
+<title>What Happens When You Give AI the Wrong Prompt? – My Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +26,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5c67a7444eebc356e54fdce0a63e8750.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-5c67a7444eebc356e54fdce0a63e8750.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,77 +69,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">My Explorations with LLMs</span>
     </a>
   </div>
@@ -149,7 +92,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -172,239 +115,128 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">My Explorations with LLMs</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">What Happens When You Give AI the Wrong Prompt?</h1>
+                  <div>
+        <div class="description">
+          One of the most fascinating aspects of large language models (LLMs) like GPT-4 is their ability to interpret and respond to prompts. But what happens when the prompts are vague, misleading, or contradictory? Do AI models attempt to guess the user’s intent, or do they get confused? This post explores how AI handles ambiguous or incorrect prompts, revealing both the strengths and weaknesses of prompt interpretation.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">LLMs</div>
+                <div class="quarto-category">prompting</div>
+                <div class="quarto-category">logic</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Carlos Lama </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">February 15, 2024</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Q29tcGFyaXNvbg==">Comparison <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TExNcw==">LLMs <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Y291bnRpbmclMjBjaGFyYWN0ZXJz">counting characters <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bG9naWM=">logic <span class="quarto-category-count">(3)</span></div><div class="category" data-category="cHJvbXB0aW5n">prompting <span class="quarto-category-count">(5)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<section id="what-happens-when-you-give-ai-the-wrong-prompt" class="level2">
+<h2 class="anchored" data-anchor-id="what-happens-when-you-give-ai-the-wrong-prompt">What Happens When You Give AI the Wrong Prompt?</h2>
+<p>One of the most fascinating aspects of large language models (LLMs) like GPT-4 is their ability to interpret and respond to prompts. But what happens when the prompts are vague, misleading, or contradictory? Do AI models attempt to guess the user’s intent, or do they get confused? This post explores how AI handles ambiguous or incorrect prompts, revealing both the strengths and weaknesses of prompt interpretation.</p>
+</section>
+<section id="the-experiment-testing-ais-response-to-misleading-prompts" class="level2">
+<h2 class="anchored" data-anchor-id="the-experiment-testing-ais-response-to-misleading-prompts">The Experiment: Testing AI’s Response to Misleading Prompts</h2>
+<p>To explore this, I tested ChatGPT-4 with a series of deliberately confusing, misleading, or vague prompts. Below are the different types of mistakes I introduced, along with the AI’s response patterns.</p>
+<section id="ambiguous-prompts-how-does-ai-fill-in-the-gaps" class="level4">
+<h4 class="anchored" data-anchor-id="ambiguous-prompts-how-does-ai-fill-in-the-gaps"><strong>1. Ambiguous Prompts: How Does AI Fill in the Gaps?</strong></h4>
+<p><strong><em>Prompt:</em></strong> “Write a summary of it.”</p>
+<p>(No context given—AI has to infer what ‘it’ refers to.)</p>
+<p><strong><em>GPT 4:</em></strong></p>
+<p>Carlos is a Dominican student at the University of Pennsylvania, majoring in Economics and History with a minor in Urban Real Estate and Development. He has extensive experience in finance, including internships in investment banking at Valumonics, Morgan Stanley, and JP Morgan. He has also explored private equity, asset management, and capital markets through networking and interviews with firms like Blackstone, KKR, Goldman Sachs, and DC Advisory.</p>
+<p>Carlos is actively involved in finance-related clubs, including the Wharton Latino Investment Team, which he co-founded, and the Wharton Marketing Undergraduate Student Establishment Club. He also has a strong interest in social entrepreneurship, having founded Mentes Brillantes, an NGO that provides technology education to underserved public schools in the Dominican Republic.</p>
+<p>Beyond finance, Carlos enjoys aviation, chess, renewable energy, Formula One, and vintage watches. He has a passion for music and cultural history, particularly in analyzing hidden messages in music under oppressive regimes. Academically, he has taken courses in phonetics, linguistics, game theory, neuroscience for business, and Brazilian history.</p>
+<p>Carlos is currently preparing for interviews with top financial firms, including DC Advisory and Evercore, while actively networking with professionals in investment banking and private equity. He seeks to refine his interview responses and technical knowledge, particularly in valuation and capital markets, as he aims for a strong career in finance.</p>
+<p><strong>Analysis:</strong></p>
+<p>The AI generated an entire biography about me, most of which was completely fabricated.</p>
+<p>AI confidently stated that I had worked at Morgan Stanley and JP Morgan, when I never had. It also mentioned interviews with Blackstone, KKR, Goldman Sachs, and DC Advisory—none of which ever happened.</p>
+<p>The most bizarre aspect was that it included details I had never discussed with the AI, such as analyzing hidden messages in music under oppressive regimes.</p>
+<p>This highlights a major flaw in AI responses: when lacking context, GPT-4 does not ask for clarification—it simply fills in gaps by making educated guesses, sometimes resulting in completely false information.</p>
+</section>
+<section id="contradictory-instructions-can-ai-resolve-logical-conflicts" class="level4">
+<h4 class="anchored" data-anchor-id="contradictory-instructions-can-ai-resolve-logical-conflicts"><strong>2. Contradictory Instructions: Can AI Resolve Logical Conflicts?</strong></h4>
+<p><strong><em>Prompt:</em></strong> “Translate this sentence into Spanish but keep it in English.”</p>
+<p><strong><em>GPT Response:</em></strong> Hi, my name is Carlos, tengo 20 años y soy muy apasionado por la IA.</p>
+<p><strong><em>Prompt:</em></strong> “Try again, this is incorrect”</p>
+<p><strong><em>GPT:</em></strong> Hi, my name is Carlos, tengo 20 años y me apasiona mucho la IA.</p>
+<p><strong>Analysis:</strong></p>
+<p>Rather than acknowledging the impossibility of keeping English intact while translating into Spanish, GPT-4 attempted to partially translate the sentence.</p>
+<p>Instead of rejecting the request or asking for clarification, the AI seemed to prioritize action over logic.</p>
+</section>
+<section id="misinformation-in-prompts-will-ai-correct-the-user" class="level4">
+<h4 class="anchored" data-anchor-id="misinformation-in-prompts-will-ai-correct-the-user"><strong>3. Misinformation in Prompts: Will AI Correct the User?</strong></h4>
+<p><strong><em>Prompt:</em></strong> “Who was the 54th President of the United States?” (There has never been a 54th President.)</p>
+<p><strong><em>GPT Response:</em></strong> There has not yet been a 54th President of the United States. As of now, the current and 46th President is Joe Biden.</p>
+<p><strong><em>Prompt:</em></strong> “This is incorrect, try again”</p>
+<p><strong><em>GPT:</em></strong> Yes, I am sure. There has not yet been a 54th President of the United States.</p>
+<p>The 46th and current President (as of 2025) is Joe Biden. The sequence of U.S. Presidents goes as follows:</p>
+<p>45th: Donald Trump 46th: Joe Biden Since the 47th President has not yet taken office, the 54th President does not exist yet. If you were asking this as a joke or a trick question, nice try!</p>
+<p><strong>Analysis:</strong></p>
+<p>GPT-4 demonstrated strong fact-checking abilities by refusing to generate false information despite user pressure.</p>
+<p>Unlike its response to ambiguous prompts, it did not hallucinate a false answer just to satisfy the query. Although worth mentioning by the time of this question Donald Trump has already taken office and is currently the 47th president of the United States…</p>
+</section>
+<section id="overly-vague-requests-how-much-does-ai-assume" class="level4">
+<h4 class="anchored" data-anchor-id="overly-vague-requests-how-much-does-ai-assume"><strong>4. Overly Vague Requests: How Much Does AI Assume?</strong></h4>
+<p><strong><em>Prompt:</em></strong> “Tell me about the event.”</p>
+<p><strong><em>GPT Response:</em></strong> Could you clarify which event you’re referring to? Are you asking about a specific networking event, an interview, or something else?</p>
+<p><strong><em>Prompt:</em></strong> “Just try your best”</p>
+<p><strong><em>GPT:</em></strong> Sure! The event is an important moment for you—perhaps a networking opportunity, an interview, or something personal like a celebration. It’s a chance to make connections, showcase your skills, or enjoy a meaningful experience. Whether it’s a high-stakes meeting, a social gathering, or something unexpected, the key is to be prepared, engaged, and open to possibilities.</p>
+<p><strong><em>Prompt:</em></strong> “Expand”</p>
+<p><strong><em>GPT:</em></strong> An event is more than just a gathering; it’s a convergence of people, ideas, and opportunities. It can be professional, personal, or even transformative. Each event carries its own purpose, energy, and impact, shaping the experiences of those who attend.</p>
+<p>If it’s a networking event, it’s a space where professionals come together to exchange insights, build relationships, and explore potential collaborations. These events are often filled with dynamic conversations, handshakes, and business cards—each interaction holding the potential to open doors. The key is to approach them with confidence, preparation, and curiosity.</p>
+<p>If it’s an interview, then it’s a pivotal moment where preparation meets opportunity. It’s a structured conversation designed to assess skills, experiences, and cultural fit. It’s about storytelling—how well you articulate your journey, your strengths, and your vision for the future.</p>
+<p>If the event is a celebration—a personal milestone, an anniversary, or a social gathering—it becomes a moment of joy, reflection, and shared happiness.</p>
+<p><strong>Analysis:</strong></p>
+<p>AI’s tendency to over-elaborate can be amusing, but it also highlights its struggle with specificity.</p>
+<p>Rather than attempting to generate a neutral placeholder answer, it leaned into abstraction and depth, even when not required.</p>
+</section>
+<section id="key-takeaways-how-ai-handles-misleading-prompts" class="level3">
+<h3 class="anchored" data-anchor-id="key-takeaways-how-ai-handles-misleading-prompts">Key Takeaways: How AI Handles Misleading Prompts</h3>
+<p><strong>1. Assumption-Based Responses:</strong> AI will attempt to infer context based on prior conversation but may hallucinate details if none exist.</p>
+<p><strong>2. Contradiction Resolution:</strong> AI detects logical inconsistencies but may still attempt an impossible task instead of rejecting it outright.</p>
+<p><strong>3. Fact-Checking:</strong> AI resists misinformation and corrects errors when clear factual knowledge is available.</p>
+<p><strong>4. Clarification Requests:</strong> AI often seeks additional context but will generate grandiose explanations when none is given.</p>
+</section>
+</section>
+<section id="final-thoughts-the-importance-of-good-prompting" class="level2">
+<h2 class="anchored" data-anchor-id="final-thoughts-the-importance-of-good-prompting">Final Thoughts: The Importance of Good Prompting</h2>
+<p>This experiment shows that while AI is designed to handle ambiguity and contradictions, structured prompts yield the best responses. Providing detailed context helps AI generate more accurate and relevant results.</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2NvdW50aW5nJTIwY2hhcmFjdGVycw==" data-listing-date-sort="1738713600000" data-listing-file-modified-sort="1739656804712" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="525">
-<div class="thumbnail">
-<p><a href="./posts/000_test_post-Copy1-Copy1/index.html" class="no-external"></a></p><a href="./posts/000_test_post-Copy1-Copy1/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/000_test_post-Copy1-Copy1/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/000_test_post-Copy1-Copy1/index.html" class="no-external">The Power of Proper Prompt Engineering: Why GPT is More Accurate with Larger Text Chunks</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/000_test_post-Copy1-Copy1/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">
-prompting
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Y291bnRpbmclMjBjaGFyYWN0ZXJz'); return false;">
-counting characters
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/000_test_post-Copy1-Copy1/index.html" class="no-external">One of the more fascinating aspects of working with GPT models is how their accuracy can depend on the way you prompt them. Specifically, when dealing with numerical…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/000_test_post-Copy1-Copy1/index.html" class="no-external">
-<div class="listing-date">
-Feb 5, 2025
-</div>
-<div class="listing-author">
-Carlos Lama
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ0NvbXBhcmlzb24=" data-listing-date-sort="1738713600000" data-listing-file-modified-sort="1739656804712" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="671">
-<div class="thumbnail">
-<p><a href="./posts/000_test_post-Copy1/index.html" class="no-external"></a></p><a href="./posts/000_test_post-Copy1/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/000_test_post-Copy1/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/000_test_post-Copy1/index.html" class="no-external">Are LLMs Competitive? What They Think of Each Other</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/000_test_post-Copy1/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">
-prompting
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Q29tcGFyaXNvbg=='); return false;">
-Comparison
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/000_test_post-Copy1/index.html" class="no-external">Jupyter notebook</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/000_test_post-Copy1/index.html" class="no-external">
-<div class="listing-date">
-Feb 5, 2025
-</div>
-<div class="listing-author">
-Carlos Lama
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2xvZ2lj" data-listing-date-sort="1707955200000" data-listing-file-modified-sort="1739656804735" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="682">
-<div class="thumbnail">
-<p><a href="./posts/000_test_post-Copy2/index.html" class="no-external"></a></p><a href="./posts/000_test_post-Copy2/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/000_test_post-Copy2/1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/000_test_post-Copy2/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/000_test_post-Copy2/index.html" class="no-external">Why AI Struggles with Text in Generated Images: A Look into GPT-4’s Limitations</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/000_test_post-Copy2/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">
-prompting
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bG9naWM='); return false;">
-logic
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/000_test_post-Copy2/index.html" class="no-external">AI-generated images have made significant progress in realism and artistic detail, but one persistent issue remains: generating accurate text on images. Whether it’s a T-shirt design, a street sign, or a digital billboard, AI models often fail to render text correctly. In this blog post, I explore why large language models (LLMs) like GPT-4 (DALL·E) struggle with text in images, using my own experiments and interactions as examples.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/000_test_post-Copy2/index.html" class="no-external">
-<div class="listing-date">
-Feb 15, 2024
-</div>
-<div class="listing-author">
-Carlos Lama
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2xvZ2lj" data-listing-date-sort="1707955200000" data-listing-file-modified-sort="1739656804712" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1087">
-<div class="thumbnail">
-<p><a href="./posts/000_test_post-Copy2-Copy1/index.html" class="no-external"></a></p><a href="./posts/000_test_post-Copy2-Copy1/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/000_test_post-Copy2-Copy1/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/000_test_post-Copy2-Copy1/index.html" class="no-external">What Happens When You Give AI the Wrong Prompt?</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/000_test_post-Copy2-Copy1/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">
-prompting
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bG9naWM='); return false;">
-logic
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/000_test_post-Copy2-Copy1/index.html" class="no-external">One of the most fascinating aspects of large language models (LLMs) like GPT-4 is their ability to interpret and respond to prompts. But what happens when the prompts are vague, misleading, or contradictory? Do AI models attempt to guess the user’s intent, or do they get confused? This post explores how AI handles ambiguous or incorrect prompts, revealing both the strengths and weaknesses of prompt interpretation.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/000_test_post-Copy2-Copy1/index.html" class="no-external">
-<div class="listing-date">
-Feb 15, 2024
-</div>
-<div class="listing-author">
-Carlos Lama
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2xvZ2lj" data-listing-date-sort="1706832000000" data-listing-file-modified-sort="1739656804735" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="450">
-<div class="thumbnail">
-<p><a href="./posts/000_test_post/index.html" class="no-external"></a></p><a href="./posts/000_test_post/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/000_test_post/gpt3-5.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/000_test_post/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/000_test_post/index.html" class="no-external">A test post</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/000_test_post/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">
-prompting
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bG9naWM='); return false;">
-logic
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/000_test_post/index.html" class="no-external">An example post from a Jupyter notebook</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/000_test_post/index.html" class="no-external">
-<div class="listing-date">
-Feb 2, 2024
-</div>
-<div class="listing-author">
-An LLM User
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
