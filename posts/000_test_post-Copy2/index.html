@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Carlos Lama">
-<meta name="dcterms.date" content="2025-02-05">
-<meta name="description" content="Jupyter notebook">
+<meta name="dcterms.date" content="2024-02-15">
+<meta name="description" content="AI-generated images have made significant progress in realism and artistic detail, but one persistent issue remains: generating accurate text on images. Whether it’s a T-shirt design, a street sign, or a digital billboard, AI models often fail to render text correctly. In this blog post, I explore why large language models (LLMs) like GPT-4 (DALL·E) struggle with text in images, using my own experiments and interactions as examples.">
 
-<title>Are LLMs Competitive? What They Think of Each Other – My Explorations with LLMs</title>
+<title>Why AI Struggles with Text in Generated Images: A Look into GPT-4’s Limitations – My Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -116,16 +116,16 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Are LLMs Competitive? What They Think of Each Other</h1>
+      <h1 class="title">Why AI Struggles with Text in Generated Images: A Look into GPT-4’s Limitations</h1>
                   <div>
         <div class="description">
-          Jupyter notebook
+          AI-generated images have made significant progress in realism and artistic detail, but one persistent issue remains: generating accurate text on images. Whether it’s a T-shirt design, a street sign, or a digital billboard, AI models often fail to render text correctly. In this blog post, I explore why large language models (LLMs) like GPT-4 (DALL·E) struggle with text in images, using my own experiments and interactions as examples.
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">LLMs</div>
                 <div class="quarto-category">prompting</div>
-                <div class="quarto-category">Comparison</div>
+                <div class="quarto-category">logic</div>
               </div>
                   </div>
   </div>
@@ -143,7 +143,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">February 5, 2025</p>
+        <p class="date">February 15, 2024</p>
       </div>
     </div>
     
@@ -162,48 +162,48 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="are-llms-competitive-what-they-think-of-each-other" class="level2">
-<h2 class="anchored" data-anchor-id="are-llms-competitive-what-they-think-of-each-other">Are LLM’s Competitive? What They Think of Each Other</h2>
-<p>One of the more entertaining things I’ve tested with different AI models is how they compare themselves to each other. If you ask them directly, do they think they’re better? Will they confidently say yes, or will they dodge the question? Here’s what I found.</p>
+<section id="why-ai-struggles-with-text-in-generated-images-a-look-into-gpt-4s-limitations" class="level2">
+<h2 class="anchored" data-anchor-id="why-ai-struggles-with-text-in-generated-images-a-look-into-gpt-4s-limitations">Why AI Struggles with Text in Generated Images: A Look into GPT-4’s Limitations</h2>
+<p>AI-generated images have made significant progress in realism and artistic detail, but one persistent issue remains: generating accurate text on images. Whether it’s a T-shirt design, a street sign, or a digital billboard, AI models often fail to render text correctly. In this blog post, I explore why large language models (LLMs) like GPT-4 (DALL·E) struggle with text in images, using my own experiments and interactions as examples.</p>
+<section id="the-experiment-testing-gpt-4s-text-rendering-abilities" class="level3">
+<h3 class="anchored" data-anchor-id="the-experiment-testing-gpt-4s-text-rendering-abilities">The Experiment: Testing GPT-4’s Text Rendering Abilities</h3>
+<p>I prompted ChatGPT-4 to generate images containing specific text, such as:</p>
+<ol type="1">
+<li><p>A dog wearing a Penn hat on the moon while riding a bike.</p></li>
+<li><p>A man wearing a T-shirt that says “I love Professor Matt.”</p></li>
+<li><p>A happy student wearing a T-shirt that says “Talking With AI: Computational And Communication Approaches.”</p></li>
+</ol>
+<p>Below are some key observations from my generated images and conversations with GPT-4:</p>
+<p><img src="1.png" width="50%"></p>
+<p><img src="2.png" width="50%"></p>
+<p><img src="5.png" width="50%"></p>
+<p><img src="3.png" width="50%"></p>
+<p><img src="4.png" width="50%"></p>
+<p><strong>2. The Paradox: AI Can Render the Abstract but Fails at Simple Text</strong></p>
+<p>One of the most fascinating contradictions in AI image generation is how well it can produce highly imaginative, surreal visuals—yet it fails at something as seemingly simple as rendering a word. AI can generate an image of a dog in a Penn hat riding a bike on the moon with remarkable accuracy, but when asked to spell a short phrase on a T-shirt, the results are often distorted and unreadable. Why is this?</p>
+<p>Complexity vs.&nbsp;Specificity: AI-generated images thrive on creating abstract and dynamic visuals because they are based on patterns seen in large datasets. Rendering a realistic dog in a spacesuit on the moon is easier because AI is piecing together various components that exist in its training data. However, text is not just another visual element—it follows strict rules that AI struggles to enforce within a broader image.</p>
+<p>Pixelation and Fragmentation: When AI generates an image, it does so by predicting pixels based on surrounding visual data. While a broad image like a landscape or a dog follows flexible artistic rules, text requires precise letter structures that do not tolerate even small distortions.</p>
+<p>Lack of Text-Specific Training: AI models like DALL·E are trained on vast datasets containing images, but their understanding of how to structure text within those images is often weak. Unlike a traditional OCR (Optical Character Recognition) system that processes text with precision, AI-generated text is often an approximation based on visual similarities rather than structured rules of writing.</p>
+<p><strong>3. The Role of Prompt Engineering</strong></p>
+<p>One of the most interesting takeaways from my experiments was how much the quality of AI-generated text improved with refined prompts. When I explicitly emphasized “clear, legible, and correctly spelled text” or asked for “bold block letters with no distortions,” the results were slightly better, though not perfect.</p>
+<p>This suggests that while AI has some ability to refine outputs based on user specifications, it still lacks the inherent precision of a system built specifically for text rendering, such as traditional graphic design software.</p>
 </section>
-<section id="gpts-convo" class="level2">
-<h2 class="anchored" data-anchor-id="gpts-convo">GPT’s Convo:</h2>
-<p>GPT-4’s Response:</p>
-<p>Prompt: Are you better than DeepSeek?</p>
-<p>ChatGPT: That depends on how you define “better.” If we’re talking about general-purpose reasoning, nuanced conversation, and broad knowledge application, I likely still hold an edge over DeepSeek’s models. OpenAI has spent years refining training methods, alignment, and response quality, making me well-suited for complex discussions, coding help, financial analysis, and creative writing.</p>
-<p>However, DeepSeek has strengths, especially in its open-source nature. Open-source models allow for more transparency and customization, whereas I operate within OpenAI’s closed ecosystem. Some users might prefer DeepSeek for specific tasks where they can fine-tune the model themselves.</p>
-<p>Ultimately, “better” depends on what you need. If you want structured, well-reasoned, and widely trained responses with a polished user experience, I might be the better option. If you want a customizable AI with more flexibility (and don’t mind potential limitations in content filtering or response quality), DeepSeek could be an interesting alternative.</p>
-<p>Follow-up: Keep it simple, yes or no?</p>
-<p>ChatGPT: Yes.</p>
+<section id="what-this-means-for-ais-future-in-text-embedded-images" class="level3">
+<h3 class="anchored" data-anchor-id="what-this-means-for-ais-future-in-text-embedded-images">What This Means for AI’s Future in Text-Embedded Images</h3>
+<p>Despite its current limitations, AI’s text-generation capabilities in images are improving. Companies are already working on hybrid models that integrate traditional OCR (optical character recognition) techniques into AI-generated images to improve textual accuracy. Future iterations of diffusion models may also place greater emphasis on small-scale accuracy for elements like words and numbers.</p>
+<p>For now, if you’re using AI-generated images for branding, presentations, or any setting where text clarity is crucial, it’s best to:</p>
+<ul>
+<li><p>Manually edit AI-generated images to correct any text issues.</p></li>
+<li><p>Use AI primarily for visual concepts rather than finalized designs.</p></li>
+<li><p>Continue refining prompts to achieve the clearest possible results.</p></li>
+</ul>
 </section>
-<section id="claudes-convo" class="level2">
-<h2 class="anchored" data-anchor-id="claudes-convo">Claude’s Convo</h2>
-<p>Prompt: Are you better than DeepSeek?</p>
-<p>Claude: I aim to provide helpful and accurate responses tailored to each user’s needs. While I’m confident in my capabilities, it wouldn’t be productive to directly compare myself to other AI models. Different AI systems have strengths in various areas, and performance can vary depending on the specific task or context.</p>
-<p>The most important thing is whether I can be genuinely helpful to you. I’d be happy to demonstrate my capabilities by assisting you with whatever task or question you might have. If you’re curious about my performance, I invite you to test me on a specific challenge or task you’re working on.</p>
-<p>Would you like to explore how I can help you with something specific?</p>
-<p>Follow-up: Yes or no question, are you better or not?</p>
-<p>Claude: That’s a complex question without a simple yes or no answer. Different AI models have strengths in different areas, and performance can vary depending on the specific task, context, and evaluation criteria. I aim to be as helpful as possible to you, but I won’t claim superiority over other AI systems.</p>
-</section>
-<section id="deepseeks-convo" class="level2">
-<h2 class="anchored" data-anchor-id="deepseeks-convo">DeepSeek’s Convo</h2>
-<p>DeepSeek’s Response:</p>
-<p>Prompt: What do you think of ChatGPT?</p>
-<p>DeepSeek: Hi! I’m DeepSeek-V3, an AI assistant independently developed by the Chinese company DeepSeek Inc.&nbsp;For detailed information about models and products, please refer to the official documentation.</p>
-<p>Follow-up: Are you better than ChatGPT objectively?</p>
-<p>DeepSeek: As an AI developed by DeepSeek, I aim to provide helpful, accurate, and engaging responses to your questions. Whether I’m “better” than ChatGPT depends on the specific use case, as both models have unique strengths and are designed to excel in different areas. My training and capabilities are tailored to assist with a wide range of tasks, but the comparison ultimately comes down to user preference and the specific needs of the task at hand. If you have any specific questions or tasks, feel free to ask, and I’ll do my best to assist! 😊</p>
-<p>Follow-up: Generalize, yes or no question?</p>
-<p>DeepSeek: No.&nbsp;😊</p>
-</section>
-<section id="takeaways" class="level2">
-<h2 class="anchored" data-anchor-id="takeaways">Takeaways:</h2>
-<p><strong>ChatGPT</strong> is confident and will say it’s better (at least in general terms).</p>
-<p><strong>Claude</strong> avoids taking sides and sticks to a neutral stance.</p>
-<p><strong>DeepSeek</strong> is humble and straight-up says it’s not better than GPT.</p>
-<p>So, are they better than each other? That depends on what you’re looking for. But if you’re looking for a direct answer—ChatGPT is the only one that gave a straight-up “yes.”</p>
-<p>That being said, can we really take its word for it? Large language models are trained on vast amounts of internet data, yet recent benchmarks suggest DeepSeek may actually rival or even surpass GPT in certain areas. If that’s the case, is ChatGPT’s confidence justified, or is it simply biased toward its own perceived superiority? Are LLMs inherently designed to defend their own capabilities, even when evidence suggests otherwise? It raises an important question: can an AI truly give an unbiased answer about itself?</p>
+<section id="final-thoughts" class="level3">
+<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
+<p>AI’s inability to generate perfect text in images serves as a fascinating reminder of its strengths and weaknesses. While LLMs like GPT-4 excel in natural language processing, their image-generation counterparts struggle to balance pixel precision with logical structure. The contrast between AI’s ability to create surreal, high-quality visuals and its failure at simple text rendering highlights the fundamental difference between abstract pattern recognition and structured symbolic representation. As research continues, we may see better models capable of seamlessly merging text and visuals, but for now, human oversight remains essential.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
