@@ -2,19 +2,18 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/Testing Irony and Sarcasm Detection in ChatGPT/index.html",
+      "/posts/GPT, Make Me a Game/index.html",
+      "/posts/When a New LLM Called Itself ChatGPT Introduction/index.html",
+      "/posts/Why ChatGPT Can Now See, Hear, and Speak/index.html",
       "/posts/Confessions of a Biased Machine/index.html",
-      "/posts/Grok Unpacked/index.html",
+      "/posts/Testing AI’s Ability to ‘Think’ Beyond Its Training/index.html",
+      "/posts/What Happens When LLMs Start Creating Their Own Codecs/index.html",
       "/posts/Truth or Hallucination?/index.html",
+      "/posts/Grok Unpacked/index.html",
       "/posts/Does Uncensored AI Lead to More Honest Conversations?/index.html",
-      "/posts/How LLMs Handle Hypotheticals and Ethical Limits/index.html",
-      "/posts/The AI Time Machine/index.html",
-      "/posts/000_test_post-Copy2-Copy2/index.html",
       "/posts/Can AI Be Fooled by Optical Illusions? A Visual Experiment/index.html",
       "/posts/Gemini Flash and the Next Wave of Visual AI/index.html",
-      "/posts/000_test_post-Copy1-Copy1/index.html",
-      "/posts/000_test_post-Copy1/index.html",
-      "/posts/000_test_post-Copy2-Copy1/index.html",
-      "/posts/000_test_post-Copy2/index.html",
       "/posts/000_test_post/index.html"
     ]
   }

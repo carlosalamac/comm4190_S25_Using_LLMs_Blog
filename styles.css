@@ -1,1 +1,71 @@
 /* css styles */
+
+/* styles.css – Custom Light Blue Theme */
+
+/* Base background & text */
+body {
+  background-color: #f0f8ff; /* Light blue (AliceBlue) */
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Header styling */
+header, .navbar, .quarto-title-banner {
+  background-color: #d6ecff;
+  border-bottom: 1px solid #b0d4f1;
+  color: #003366;
+}
+
+/* Header links */
+.navbar a, .navbar-brand {
+  color: #003366 !important;
+}
+
+.navbar a:hover {
+  color: #005f99 !important;
+  text-decoration: underline;
+}
+
+/* Page title */
+h1.title {
+  color: #003366;
+  font-size: 2.4rem;
+  margin-top: 1rem;
+}
+
+/* Section headers */
+h2, h3, h4 {
+  color: #005f99;
+  margin-top: 2rem;
+}
+
+/* Links */
+a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #005f99;
+  text-decoration: underline;
+}
+
+/* Code blocks */
+pre, code {
+  background-color: #e6f3ff;
+  color: #003366;
+  border-radius: 6px;
+  padding: 0.2em 0.4em;
+}
+
+/* Cards for blog previews */
+.card {
+  background-color: #ffffff;
+  border: 1px solid #cce6ff;
+  border-radius: 10px;
+  padding: 1rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
