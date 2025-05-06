@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Carlos Lama">
-<meta name="dcterms.date" content="2025-04-06">
-<meta name="description" content="We’ve all heard someone say, “ChatGPT is so creative!” But is that really true? What does it mean for a machine trained entirely on past data to generate something new? In this post, I wanted to explore one of the biggest questions in communication and artificial intelligence: Can language models actually think outside the box — or are they just remixing what they’ve seen before?  Welcome to a world where ChatGPT doesn’t just talk — it sees, hears, and speaks.">
+<meta name="dcterms.date" content="2025-02-23">
+<meta name="description" content="The intersection of artificial intelligence and historical cryptography is an emerging field with exciting possibilities. In our last class, we put GPT-4 to the test by attempting to decode a mysterious 19th-century piece of automatic writing—a form of writing believed to be guided by unconscious thought or spiritual forces. This document, discovered in Philadelphia, consists of symbols that appear to follow a structured linguistic pattern, raising the question: Can AI help us decipher it?">
 
-<title>Do LLMs Dream of Original Thoughts? Testing AI’s Ability to ‘Think’ Beyond Its Training – My Explorations with LLMs</title>
+<title>Confessions of a Biased Machine: Probing the Limits of ‘Fair’ AI – My Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -117,16 +117,16 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Do LLMs Dream of Original Thoughts? Testing AI’s Ability to ‘Think’ Beyond Its Training</h1>
+      <h1 class="title">Confessions of a Biased Machine: Probing the Limits of ‘Fair’ AI</h1>
                   <div>
         <div class="description">
-          We’ve all heard someone say, “ChatGPT is so creative!” But is that really true?<br>What does it mean for a machine trained entirely on past data to generate something new? In this post, I wanted to explore one of the biggest questions in communication and artificial intelligence: Can language models actually think outside the box — or are they just remixing what they’ve seen before? <br><br>Welcome to a world where ChatGPT doesn’t just talk — it sees, hears, and speaks.
+          The intersection of artificial intelligence and historical cryptography is an emerging field with exciting possibilities. In our last class, we put GPT-4 to the test by attempting to decode a mysterious 19th-century piece of automatic writing—a form of writing believed to be guided by unconscious thought or spiritual forces. This document, discovered in Philadelphia, consists of symbols that appear to follow a structured linguistic pattern, raising the question: Can AI help us decipher it?
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">Creativity</div>
-                <div class="quarto-category">Language</div>
-                <div class="quarto-category">Simulation</div>
+                <div class="quarto-category">LLMs</div>
+                <div class="quarto-category">prompting</div>
+                <div class="quarto-category">automatic writing</div>
               </div>
                   </div>
   </div>
@@ -144,7 +144,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">April 6, 2025</p>
+        <p class="date">February 23, 2025</p>
       </div>
     </div>
     
@@ -163,61 +163,87 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="do-llms-dream-of-original-thoughts-testing-ais-ability-to-think-beyond-its-training" class="level2">
-<h2 class="anchored" data-anchor-id="do-llms-dream-of-original-thoughts-testing-ais-ability-to-think-beyond-its-training"><strong>Do LLMs Dream of Original Thoughts? Testing AI’s Ability to ‘Think’ Beyond Its Training</strong></h2>
-<section id="the-myth-of-ai-creativity" class="level4">
-<h4 class="anchored" data-anchor-id="the-myth-of-ai-creativity">The Myth of AI Creativity</h4>
-<p>We’ve all heard someone say, “ChatGPT is so creative!” But is that really true? What does it mean for a machine trained entirely on past data to generate something new? In this post, I wanted to explore one of the biggest questions in communication and artificial intelligence: Can language models actually think outside the box — or are they just remixing what they’ve seen before?</p>
+<section id="using-ai-to-decode-a-19th-century-automatic-writing-a-case-study" class="level2">
+<h2 class="anchored" data-anchor-id="using-ai-to-decode-a-19th-century-automatic-writing-a-case-study">Using AI to Decode a 19th-Century Automatic Writing: A Case Study</h2>
+<p>The intersection of artificial intelligence and historical cryptography is an emerging field with exciting possibilities. In our last class, we put GPT-4 to the test by attempting to decode a mysterious 19th-century piece of automatic writing—a form of writing believed to be guided by unconscious thought or spiritual forces. This document, discovered in Philadelphia, consists of symbols that appear to follow a structured linguistic pattern, raising the question: <strong>Can AI help us decipher it?</strong></p>
+<p>This post walks through our experiment, including our conversation with GPT, its analysis, and what we learned from the process.</p>
+<section id="why-this-experience-matters" class="level3">
+<h3 class="anchored" data-anchor-id="why-this-experience-matters">Why This Experience Matters</h3>
+<p>Automatic writing has long been a subject of intrigue—some believe it to be a form of spiritual communication, while others see it as an unconscious creative process. The document we analyzed seemed to follow a structured pattern, suggesting it contained a meaningful message.</p>
+<p>Our goal was to test AI’s ability to:</p>
+<ol type="1">
+<li>Recognize patterns and linguistic structures.</li>
+<li>Identify repetitive symbols that could indicate common words.</li>
+<li>Suggest possible translations or thematic meanings.</li>
+<li>Determine if the text aligned with any known shorthand or coded language.</li>
+</ol>
+<p><img src="SS1.png" width="50%"></p>
 </section>
-<section id="creativity-or-collage-how-llms-actually-work" class="level3">
-<h3 class="anchored" data-anchor-id="creativity-or-collage-how-llms-actually-work">Creativity or Collage? How LLMs Actually Work</h3>
-<p>Large language models like GPT-4 are trained on billions of words pulled from books, websites, social media, and more. When they respond to you, they’re essentially predicting the next most likely word or phrase based on patterns in the data.</p>
-<p>So the question becomes: If an AI has never “experienced” the world — only read about it — can it create something truly original?</p>
-</section>
-<section id="experiment-1-the-creativity-stress-test" class="level3">
-<h3 class="anchored" data-anchor-id="experiment-1-the-creativity-stress-test">Experiment 1: The Creativity Stress Test</h3>
-<p>I gave ChatGPT a mashup-style challenge that most humans would find… weird, but possible:</p>
-<p><strong><em>Prompt:</em></strong> “Invent a startup that combines ancient Mayan agricultural techniques with quantum computing.”</p>
-<p><strong><em>ChatGPT’s response:</em></strong></p>
-<p>“Introducing Q-Maize: a futuristic agri-tech startup that fuses ancient Mayan crop rotation wisdom (such as milpa intercropping) with quantum optimization algorithms to improve land usage, predict climate impact, and optimize seed dispersal. The platform uses a quantum-enhanced simulator to test ancestral techniques against modern challenges…”</p>
-<p>Honestly? That’s kind of cool.</p>
-<p>But is it truly creative — or just a statistical smoothie blending historical keywords with startup jargon?</p>
-</section>
-<section id="experiment-2-inventing-a-word-and-meaning" class="level3">
-<h3 class="anchored" data-anchor-id="experiment-2-inventing-a-word-and-meaning">Experiment 2: Inventing a Word and Meaning</h3>
-<p>Next, I pushed for something more linguistically novel:</p>
-<p><strong><em>Prompt:</em></strong> “Invent a completely new word that doesn’t exist in any language. Define it and use it in a sentence.”</p>
-<p><strong><em>ChatGPT’s response:</em></strong></p>
-<p>“Word: Velquora Definition: The emotional tension felt before making a life-altering decision. Sentence: As I stood at the airport gate, velquora swelled inside me like a rising tide.”</p>
-<p>This was one of the most “human” responses I’d seen — a made-up word, with a subtle emotional meaning, and usage that felt poetic. It gave the illusion of originality.</p>
-<p>But when I tried again with the same prompt, I got:</p>
-<p>“Word: Zenthrix Definition: The state of simultaneous exhaustion and euphoria after completing a massive task.”</p>
-<p>Was this creative, or just tapping into patterns of invented-sounding syllables and common emotional states?</p>
-</section>
-<section id="what-communication-theories-can-tell-us" class="level3">
-<h3 class="anchored" data-anchor-id="what-communication-theories-can-tell-us">What Communication Theories Can Tell Us</h3>
-<p>From a communication studies lens, creativity isn’t just about producing new symbols — it’s also about context, intention, and meaning-making.</p>
-<p>Roland Barthes said that language is never neutral — it always reflects ideology. So what happens when language is generated by an entity with no ideology, emotion, or lived experience?</p>
-<p>Are we just getting back clever echoes of ourselves?</p>
-</section>
-<section id="why-it-matters-art-expression-and-the-future-of-human-voice" class="level3">
-<h3 class="anchored" data-anchor-id="why-it-matters-art-expression-and-the-future-of-human-voice">Why It Matters: Art, Expression, and the Future of Human Voice</h3>
-<p>If AIs can mimic creativity convincingly enough, where do we draw the line between authentic human expression and algorithmic remix? This question matters in everything from:</p>
+<section id="step-1-identifying-structure-in-the-symbols" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-identifying-structure-in-the-symbols">Step 1: Identifying Structure in the Symbols</h3>
+<p>AI’s first response confirmed that the text had a structured shorthand-like appearance, resembling Gregg or Pitman shorthand, but potentially something more obscure. This was an important discovery because it meant the symbols weren’t purely random—there was logic to how they were used.</p>
+<p>Observing the document, GPT identified:</p>
 <ul>
-<li><p>Creative writing &amp; journalism</p></li>
-<li><p>Marketing &amp; branding</p></li>
-<li><p>Music, film, and visual art</p></li>
-<li><p>Education and essay writing</p></li>
+<li>Repetitive symbols, which often indicate common words.</li>
+<li>A consistent left-to-right flow, suggesting it was meant to be read sequentially.</li>
+<li>Curved and angular strokes, similar to established shorthand systems but possibly a unique variation.</li>
 </ul>
-<p>There’s also a risk: if LLMs dominate content creation, we might start losing sight of the difference between thoughtful originality and statistical probability.</p>
+<p><img src="SS2.png" width="50%"></p>
+<p><img src="SS3.png" width="50%"></p>
+<p>So after playing around with prompting, and feeding it more and more information to see if it could put together a proper interpretation, these were my results…</p>
+<p><img src="SS4.png" width="50%"></p>
+<p><img src="SS7.png" width="50%"></p>
+<p><img src="SS10.png" width="50%"></p>
+<p><img src="SS11.png" width="50%"></p>
+<p><img src="SS12.png" width="50%"></p>
 </section>
+<section id="step-2-recognizing-common-words-and-patterns" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-recognizing-common-words-and-patterns">Step 2: Recognizing Common Words and Patterns</h3>
+<p>To get closer to meaning, GPT analyzed symbol frequency, identifying words that appeared most often. High-frequency words in most languages include articles, prepositions, and pronouns, so we focused on those.</p>
+<p>GPT’s findings suggested that symbols likely corresponded to words such as:</p>
+<ul>
+<li>“it” (recurring 26 times) – Likely referring to an event, idea, or entity.</li>
+<li>“and” (12 times) – Indicating a continuous thought or sequence.</li>
+<li>“for” (11 times) – Suggesting purpose or reasoning.</li>
+<li>“we” (9 times) – Indicating a plural perspective, possibly multiple speakers.</li>
+<li>“you” (6 times) – A direct address to the recipient.</li>
+</ul>
+<p>This reinforced the theory that the text followed structured grammar, making it more likely to be a message, a dictated narrative, or even an instruction. The consistent repetition of words hinted at a potential prophetic or spiritual theme.</p>
 </section>
-<section id="conclusion-a-mirror-not-a-mind" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion-a-mirror-not-a-mind"><strong><em>Conclusion: A Mirror, Not a Mind</em></strong></h2>
-<p>So, do LLMs “dream” of original thoughts? Not quite — they don’t dream at all. But they simulate originality in ways that can fool us, fascinate us, and even inspire us. That’s both powerful and a little dangerous.</p>
-<p>We may be looking into a mirror that speaks — but it’s still a mirror.</p>
+<section id="step-3-attempting-to-reconstruct-the-message" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-attempting-to-reconstruct-the-message">Step 3: Attempting to Reconstruct the Message</h3>
+<p>Once patterns were established, GPT attempted a structural reconstruction, piecing together possible meanings based on word placement and frequency.</p>
+<p>The emerging phrases suggested:</p>
+<p><img src="SS14.png" width="50%"></p>
+<p>These reconstructions suggest a spiritualist or visionary nature, possibly aligning with the 19th-century interest in séances, spiritual messages, and automatic writing. The phrasing felt eerily like messages often recorded in historical spiritualist documents.</p>
+</section>
+<section id="step-4-thematic-interpretation-what-was-the-purpose-of-this-text" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-thematic-interpretation-what-was-the-purpose-of-this-text">Step 4: Thematic Interpretation – What Was the Purpose of This Text?</h3>
+<p>The AI’s reconstruction raised the question: What kind of message is this? Based on word structure and phrase composition, a few possibilities emerged:</p>
+<p>A Spiritualist Transmission: The 19th century saw a surge in interest in spiritualism, where people claimed to receive messages from the deceased or higher realms. This text’s repetitive phrasing and visionary tone strongly resemble messages from séances or mediumistic writings.</p>
+<p>A Prophetic or Instructive Message: Certain phrases suggest guidance, as though directing someone toward an action, a realization, or a foreseen event. Words like “path,” “vision,” “message,” and “waiting” reinforce this theme.</p>
+<p>A Channeled Historical Account: It’s possible this document recorded someone’s dictated thoughts or experiences, preserved in a shorthand-like form for later transcription.</p>
+<p>These interpretations show how AI can contextualize historical texts, providing insights that would typically require specialized linguistic or historical expertise.</p>
+</section>
+<section id="lessons-learned-ais-strengths-and-limitations-in-historical-decoding" class="level3">
+<h3 class="anchored" data-anchor-id="lessons-learned-ais-strengths-and-limitations-in-historical-decoding">Lessons Learned: AI’s Strengths and Limitations in Historical Decoding</h3>
+<p>This experiment revealed both the potential and challenges of using AI for historical document interpretation.</p>
+<p>AI’s Strengths: ✅ Pattern Recognition: GPT successfully identified repeating symbols and inferred structural elements. ✅ Linguistic Inference: It was able to match word frequencies to common English phrases. ✅ Contextual Interpretation: GPT suggested possible meanings based on known historical writing styles.</p>
+<p>AI’s Limitations: ❌ Lack of Shorthand Training: GPT struggled because it wasn’t explicitly trained on rare shorthand systems. ❌ Ambiguity in Interpretation: Some reconstructed phrases felt generic rather than precise. ❌ Dependence on User Guidance: AI required refinement and direction to improve its output.</p>
+</section>
+<section id="final-thoughts-the-future-of-ai-in-historical-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="final-thoughts-the-future-of-ai-in-historical-analysis">Final Thoughts: The Future of AI in Historical Analysis</h3>
+<p>This case study demonstrated how AI can act as a powerful tool for uncovering meaning in mysterious texts. While GPT-4 couldn’t provide a direct translation, it played a crucial role in recognizing patterns, identifying common words, and suggesting plausible meanings.</p>
+<p>Moving forward, this approach could be improved by:</p>
+<ul>
+<li>Enhancing AI models with historical shorthand training.</li>
+<li>Using machine learning to compare texts with known archives.</li>
+<li>Applying AI to larger collections of mysterious historical documents.</li>
+</ul>
+<p>Ultimately, AI isn’t replacing human expertise—it’s enhancing it, offering new ways to analyze historical artifacts. The more we refine this process, the closer we get to unlocking the secrets of the past.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

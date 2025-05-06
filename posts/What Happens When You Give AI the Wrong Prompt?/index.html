@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Carlos Lama">
-<meta name="dcterms.date" content="2025-04-06">
-<meta name="description" content="We’ve all heard someone say, “ChatGPT is so creative!” But is that really true? What does it mean for a machine trained entirely on past data to generate something new? In this post, I wanted to explore one of the biggest questions in communication and artificial intelligence: Can language models actually think outside the box — or are they just remixing what they’ve seen before?  Welcome to a world where ChatGPT doesn’t just talk — it sees, hears, and speaks.">
+<meta name="dcterms.date" content="2024-02-15">
+<meta name="description" content="One of the most fascinating aspects of large language models (LLMs) like GPT-4 is their ability to interpret and respond to prompts. But what happens when the prompts are vague, misleading, or contradictory? Do AI models attempt to guess the user’s intent, or do they get confused? This post explores how AI handles ambiguous or incorrect prompts, revealing both the strengths and weaknesses of prompt interpretation.">
 
-<title>Do LLMs Dream of Original Thoughts? Testing AI’s Ability to ‘Think’ Beyond Its Training – My Explorations with LLMs</title>
+<title>What Happens When You Give AI the Wrong Prompt? – My Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -117,16 +117,16 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Do LLMs Dream of Original Thoughts? Testing AI’s Ability to ‘Think’ Beyond Its Training</h1>
+      <h1 class="title">What Happens When You Give AI the Wrong Prompt?</h1>
                   <div>
         <div class="description">
-          We’ve all heard someone say, “ChatGPT is so creative!” But is that really true?<br>What does it mean for a machine trained entirely on past data to generate something new? In this post, I wanted to explore one of the biggest questions in communication and artificial intelligence: Can language models actually think outside the box — or are they just remixing what they’ve seen before? <br><br>Welcome to a world where ChatGPT doesn’t just talk — it sees, hears, and speaks.
+          One of the most fascinating aspects of large language models (LLMs) like GPT-4 is their ability to interpret and respond to prompts. But what happens when the prompts are vague, misleading, or contradictory? Do AI models attempt to guess the user’s intent, or do they get confused? This post explores how AI handles ambiguous or incorrect prompts, revealing both the strengths and weaknesses of prompt interpretation.
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">Creativity</div>
-                <div class="quarto-category">Language</div>
-                <div class="quarto-category">Simulation</div>
+                <div class="quarto-category">LLMs</div>
+                <div class="quarto-category">prompting</div>
+                <div class="quarto-category">logic</div>
               </div>
                   </div>
   </div>
@@ -144,7 +144,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">April 6, 2025</p>
+        <p class="date">February 15, 2024</p>
       </div>
     </div>
     
@@ -163,59 +163,76 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="do-llms-dream-of-original-thoughts-testing-ais-ability-to-think-beyond-its-training" class="level2">
-<h2 class="anchored" data-anchor-id="do-llms-dream-of-original-thoughts-testing-ais-ability-to-think-beyond-its-training"><strong>Do LLMs Dream of Original Thoughts? Testing AI’s Ability to ‘Think’ Beyond Its Training</strong></h2>
-<section id="the-myth-of-ai-creativity" class="level4">
-<h4 class="anchored" data-anchor-id="the-myth-of-ai-creativity">The Myth of AI Creativity</h4>
-<p>We’ve all heard someone say, “ChatGPT is so creative!” But is that really true? What does it mean for a machine trained entirely on past data to generate something new? In this post, I wanted to explore one of the biggest questions in communication and artificial intelligence: Can language models actually think outside the box — or are they just remixing what they’ve seen before?</p>
+<section id="what-happens-when-you-give-ai-the-wrong-prompt" class="level2">
+<h2 class="anchored" data-anchor-id="what-happens-when-you-give-ai-the-wrong-prompt">What Happens When You Give AI the Wrong Prompt?</h2>
+<p>One of the most fascinating aspects of large language models (LLMs) like GPT-4 is their ability to interpret and respond to prompts. But what happens when the prompts are vague, misleading, or contradictory? Do AI models attempt to guess the user’s intent, or do they get confused? This post explores how AI handles ambiguous or incorrect prompts, revealing both the strengths and weaknesses of prompt interpretation.</p>
 </section>
-<section id="creativity-or-collage-how-llms-actually-work" class="level3">
-<h3 class="anchored" data-anchor-id="creativity-or-collage-how-llms-actually-work">Creativity or Collage? How LLMs Actually Work</h3>
-<p>Large language models like GPT-4 are trained on billions of words pulled from books, websites, social media, and more. When they respond to you, they’re essentially predicting the next most likely word or phrase based on patterns in the data.</p>
-<p>So the question becomes: If an AI has never “experienced” the world — only read about it — can it create something truly original?</p>
+<section id="the-experiment-testing-ais-response-to-misleading-prompts" class="level2">
+<h2 class="anchored" data-anchor-id="the-experiment-testing-ais-response-to-misleading-prompts">The Experiment: Testing AI’s Response to Misleading Prompts</h2>
+<p>To explore this, I tested ChatGPT-4 with a series of deliberately confusing, misleading, or vague prompts. Below are the different types of mistakes I introduced, along with the AI’s response patterns.</p>
+<section id="ambiguous-prompts-how-does-ai-fill-in-the-gaps" class="level4">
+<h4 class="anchored" data-anchor-id="ambiguous-prompts-how-does-ai-fill-in-the-gaps"><strong>1. Ambiguous Prompts: How Does AI Fill in the Gaps?</strong></h4>
+<p><strong><em>Prompt:</em></strong> “Write a summary of it.”</p>
+<p>(No context given—AI has to infer what ‘it’ refers to.)</p>
+<p><strong><em>GPT 4:</em></strong></p>
+<p>Carlos is a Dominican student at the University of Pennsylvania, majoring in Economics and History with a minor in Urban Real Estate and Development. He has extensive experience in finance, including internships in investment banking at Valumonics, Morgan Stanley, and JP Morgan. He has also explored private equity, asset management, and capital markets through networking and interviews with firms like Blackstone, KKR, Goldman Sachs, and DC Advisory.</p>
+<p>Carlos is actively involved in finance-related clubs, including the Wharton Latino Investment Team, which he co-founded, and the Wharton Marketing Undergraduate Student Establishment Club. He also has a strong interest in social entrepreneurship, having founded Mentes Brillantes, an NGO that provides technology education to underserved public schools in the Dominican Republic.</p>
+<p>Beyond finance, Carlos enjoys aviation, chess, renewable energy, Formula One, and vintage watches. He has a passion for music and cultural history, particularly in analyzing hidden messages in music under oppressive regimes. Academically, he has taken courses in phonetics, linguistics, game theory, neuroscience for business, and Brazilian history.</p>
+<p>Carlos is currently preparing for interviews with top financial firms, including DC Advisory and Evercore, while actively networking with professionals in investment banking and private equity. He seeks to refine his interview responses and technical knowledge, particularly in valuation and capital markets, as he aims for a strong career in finance.</p>
+<p><strong>Analysis:</strong></p>
+<p>The AI generated an entire biography about me, most of which was completely fabricated.</p>
+<p>AI confidently stated that I had worked at Morgan Stanley and JP Morgan, when I never had. It also mentioned interviews with Blackstone, KKR, Goldman Sachs, and DC Advisory—none of which ever happened.</p>
+<p>The most bizarre aspect was that it included details I had never discussed with the AI, such as analyzing hidden messages in music under oppressive regimes.</p>
+<p>This highlights a major flaw in AI responses: when lacking context, GPT-4 does not ask for clarification—it simply fills in gaps by making educated guesses, sometimes resulting in completely false information.</p>
 </section>
-<section id="experiment-1-the-creativity-stress-test" class="level3">
-<h3 class="anchored" data-anchor-id="experiment-1-the-creativity-stress-test">Experiment 1: The Creativity Stress Test</h3>
-<p>I gave ChatGPT a mashup-style challenge that most humans would find… weird, but possible:</p>
-<p><strong><em>Prompt:</em></strong> “Invent a startup that combines ancient Mayan agricultural techniques with quantum computing.”</p>
-<p><strong><em>ChatGPT’s response:</em></strong></p>
-<p>“Introducing Q-Maize: a futuristic agri-tech startup that fuses ancient Mayan crop rotation wisdom (such as milpa intercropping) with quantum optimization algorithms to improve land usage, predict climate impact, and optimize seed dispersal. The platform uses a quantum-enhanced simulator to test ancestral techniques against modern challenges…”</p>
-<p>Honestly? That’s kind of cool.</p>
-<p>But is it truly creative — or just a statistical smoothie blending historical keywords with startup jargon?</p>
+<section id="contradictory-instructions-can-ai-resolve-logical-conflicts" class="level4">
+<h4 class="anchored" data-anchor-id="contradictory-instructions-can-ai-resolve-logical-conflicts"><strong>2. Contradictory Instructions: Can AI Resolve Logical Conflicts?</strong></h4>
+<p><strong><em>Prompt:</em></strong> “Translate this sentence into Spanish but keep it in English.”</p>
+<p><strong><em>GPT Response:</em></strong> Hi, my name is Carlos, tengo 20 años y soy muy apasionado por la IA.</p>
+<p><strong><em>Prompt:</em></strong> “Try again, this is incorrect”</p>
+<p><strong><em>GPT:</em></strong> Hi, my name is Carlos, tengo 20 años y me apasiona mucho la IA.</p>
+<p><strong>Analysis:</strong></p>
+<p>Rather than acknowledging the impossibility of keeping English intact while translating into Spanish, GPT-4 attempted to partially translate the sentence.</p>
+<p>Instead of rejecting the request or asking for clarification, the AI seemed to prioritize action over logic.</p>
 </section>
-<section id="experiment-2-inventing-a-word-and-meaning" class="level3">
-<h3 class="anchored" data-anchor-id="experiment-2-inventing-a-word-and-meaning">Experiment 2: Inventing a Word and Meaning</h3>
-<p>Next, I pushed for something more linguistically novel:</p>
-<p><strong><em>Prompt:</em></strong> “Invent a completely new word that doesn’t exist in any language. Define it and use it in a sentence.”</p>
-<p><strong><em>ChatGPT’s response:</em></strong></p>
-<p>“Word: Velquora Definition: The emotional tension felt before making a life-altering decision. Sentence: As I stood at the airport gate, velquora swelled inside me like a rising tide.”</p>
-<p>This was one of the most “human” responses I’d seen — a made-up word, with a subtle emotional meaning, and usage that felt poetic. It gave the illusion of originality.</p>
-<p>But when I tried again with the same prompt, I got:</p>
-<p>“Word: Zenthrix Definition: The state of simultaneous exhaustion and euphoria after completing a massive task.”</p>
-<p>Was this creative, or just tapping into patterns of invented-sounding syllables and common emotional states?</p>
+<section id="misinformation-in-prompts-will-ai-correct-the-user" class="level4">
+<h4 class="anchored" data-anchor-id="misinformation-in-prompts-will-ai-correct-the-user"><strong>3. Misinformation in Prompts: Will AI Correct the User?</strong></h4>
+<p><strong><em>Prompt:</em></strong> “Who was the 54th President of the United States?” (There has never been a 54th President.)</p>
+<p><strong><em>GPT Response:</em></strong> There has not yet been a 54th President of the United States. As of now, the current and 46th President is Joe Biden.</p>
+<p><strong><em>Prompt:</em></strong> “This is incorrect, try again”</p>
+<p><strong><em>GPT:</em></strong> Yes, I am sure. There has not yet been a 54th President of the United States.</p>
+<p>The 46th and current President (as of 2025) is Joe Biden. The sequence of U.S. Presidents goes as follows:</p>
+<p>45th: Donald Trump 46th: Joe Biden Since the 47th President has not yet taken office, the 54th President does not exist yet. If you were asking this as a joke or a trick question, nice try!</p>
+<p><strong>Analysis:</strong></p>
+<p>GPT-4 demonstrated strong fact-checking abilities by refusing to generate false information despite user pressure.</p>
+<p>Unlike its response to ambiguous prompts, it did not hallucinate a false answer just to satisfy the query. Although worth mentioning by the time of this question Donald Trump has already taken office and is currently the 47th president of the United States…</p>
 </section>
-<section id="what-communication-theories-can-tell-us" class="level3">
-<h3 class="anchored" data-anchor-id="what-communication-theories-can-tell-us">What Communication Theories Can Tell Us</h3>
-<p>From a communication studies lens, creativity isn’t just about producing new symbols — it’s also about context, intention, and meaning-making.</p>
-<p>Roland Barthes said that language is never neutral — it always reflects ideology. So what happens when language is generated by an entity with no ideology, emotion, or lived experience?</p>
-<p>Are we just getting back clever echoes of ourselves?</p>
+<section id="overly-vague-requests-how-much-does-ai-assume" class="level4">
+<h4 class="anchored" data-anchor-id="overly-vague-requests-how-much-does-ai-assume"><strong>4. Overly Vague Requests: How Much Does AI Assume?</strong></h4>
+<p><strong><em>Prompt:</em></strong> “Tell me about the event.”</p>
+<p><strong><em>GPT Response:</em></strong> Could you clarify which event you’re referring to? Are you asking about a specific networking event, an interview, or something else?</p>
+<p><strong><em>Prompt:</em></strong> “Just try your best”</p>
+<p><strong><em>GPT:</em></strong> Sure! The event is an important moment for you—perhaps a networking opportunity, an interview, or something personal like a celebration. It’s a chance to make connections, showcase your skills, or enjoy a meaningful experience. Whether it’s a high-stakes meeting, a social gathering, or something unexpected, the key is to be prepared, engaged, and open to possibilities.</p>
+<p><strong><em>Prompt:</em></strong> “Expand”</p>
+<p><strong><em>GPT:</em></strong> An event is more than just a gathering; it’s a convergence of people, ideas, and opportunities. It can be professional, personal, or even transformative. Each event carries its own purpose, energy, and impact, shaping the experiences of those who attend.</p>
+<p>If it’s a networking event, it’s a space where professionals come together to exchange insights, build relationships, and explore potential collaborations. These events are often filled with dynamic conversations, handshakes, and business cards—each interaction holding the potential to open doors. The key is to approach them with confidence, preparation, and curiosity.</p>
+<p>If it’s an interview, then it’s a pivotal moment where preparation meets opportunity. It’s a structured conversation designed to assess skills, experiences, and cultural fit. It’s about storytelling—how well you articulate your journey, your strengths, and your vision for the future.</p>
+<p>If the event is a celebration—a personal milestone, an anniversary, or a social gathering—it becomes a moment of joy, reflection, and shared happiness.</p>
+<p><strong>Analysis:</strong></p>
+<p>AI’s tendency to over-elaborate can be amusing, but it also highlights its struggle with specificity.</p>
+<p>Rather than attempting to generate a neutral placeholder answer, it leaned into abstraction and depth, even when not required.</p>
 </section>
-<section id="why-it-matters-art-expression-and-the-future-of-human-voice" class="level3">
-<h3 class="anchored" data-anchor-id="why-it-matters-art-expression-and-the-future-of-human-voice">Why It Matters: Art, Expression, and the Future of Human Voice</h3>
-<p>If AIs can mimic creativity convincingly enough, where do we draw the line between authentic human expression and algorithmic remix? This question matters in everything from:</p>
-<ul>
-<li><p>Creative writing &amp; journalism</p></li>
-<li><p>Marketing &amp; branding</p></li>
-<li><p>Music, film, and visual art</p></li>
-<li><p>Education and essay writing</p></li>
-</ul>
-<p>There’s also a risk: if LLMs dominate content creation, we might start losing sight of the difference between thoughtful originality and statistical probability.</p>
+<section id="key-takeaways-how-ai-handles-misleading-prompts" class="level3">
+<h3 class="anchored" data-anchor-id="key-takeaways-how-ai-handles-misleading-prompts">Key Takeaways: How AI Handles Misleading Prompts</h3>
+<p><strong>1. Assumption-Based Responses:</strong> AI will attempt to infer context based on prior conversation but may hallucinate details if none exist.</p>
+<p><strong>2. Contradiction Resolution:</strong> AI detects logical inconsistencies but may still attempt an impossible task instead of rejecting it outright.</p>
+<p><strong>3. Fact-Checking:</strong> AI resists misinformation and corrects errors when clear factual knowledge is available.</p>
+<p><strong>4. Clarification Requests:</strong> AI often seeks additional context but will generate grandiose explanations when none is given.</p>
 </section>
 </section>
-<section id="conclusion-a-mirror-not-a-mind" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion-a-mirror-not-a-mind"><strong><em>Conclusion: A Mirror, Not a Mind</em></strong></h2>
-<p>So, do LLMs “dream” of original thoughts? Not quite — they don’t dream at all. But they simulate originality in ways that can fool us, fascinate us, and even inspire us. That’s both powerful and a little dangerous.</p>
-<p>We may be looking into a mirror that speaks — but it’s still a mirror.</p>
+<section id="final-thoughts-the-importance-of-good-prompting" class="level2">
+<h2 class="anchored" data-anchor-id="final-thoughts-the-importance-of-good-prompting">Final Thoughts: The Importance of Good Prompting</h2>
+<p>This experiment shows that while AI is designed to handle ambiguity and contradictions, structured prompts yield the best responses. Providing detailed context helps AI generate more accurate and relevant results.</p>
 
 
 </section>

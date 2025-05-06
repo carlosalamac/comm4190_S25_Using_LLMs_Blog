@@ -7,10 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Carlos Lama">
-<meta name="dcterms.date" content="2025-04-06">
-<meta name="description" content="We’ve all heard someone say, “ChatGPT is so creative!” But is that really true? What does it mean for a machine trained entirely on past data to generate something new? In this post, I wanted to explore one of the biggest questions in communication and artificial intelligence: Can language models actually think outside the box — or are they just remixing what they’ve seen before?  Welcome to a world where ChatGPT doesn’t just talk — it sees, hears, and speaks.">
+<meta name="dcterms.date" content="2025-02-05">
 
-<title>Do LLMs Dream of Original Thoughts? Testing AI’s Ability to ‘Think’ Beyond Its Training – My Explorations with LLMs</title>
+<title>The Power of Proper Prompt Engineering: Why GPT is More Accurate with Larger Text Chunks – My Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -117,16 +116,11 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Do LLMs Dream of Original Thoughts? Testing AI’s Ability to ‘Think’ Beyond Its Training</h1>
-                  <div>
-        <div class="description">
-          We’ve all heard someone say, “ChatGPT is so creative!” But is that really true?<br>What does it mean for a machine trained entirely on past data to generate something new? In this post, I wanted to explore one of the biggest questions in communication and artificial intelligence: Can language models actually think outside the box — or are they just remixing what they’ve seen before? <br><br>Welcome to a world where ChatGPT doesn’t just talk — it sees, hears, and speaks.
-        </div>
-      </div>
-                          <div class="quarto-categories">
-                <div class="quarto-category">Creativity</div>
-                <div class="quarto-category">Language</div>
-                <div class="quarto-category">Simulation</div>
+      <h1 class="title">The Power of Proper Prompt Engineering: Why GPT is More Accurate with Larger Text Chunks</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">LLMs</div>
+                <div class="quarto-category">prompting</div>
+                <div class="quarto-category">counting characters</div>
               </div>
                   </div>
   </div>
@@ -144,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">April 6, 2025</p>
+        <p class="date">February 5, 2025</p>
       </div>
     </div>
     
@@ -163,59 +157,50 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="do-llms-dream-of-original-thoughts-testing-ais-ability-to-think-beyond-its-training" class="level2">
-<h2 class="anchored" data-anchor-id="do-llms-dream-of-original-thoughts-testing-ais-ability-to-think-beyond-its-training"><strong>Do LLMs Dream of Original Thoughts? Testing AI’s Ability to ‘Think’ Beyond Its Training</strong></h2>
-<section id="the-myth-of-ai-creativity" class="level4">
-<h4 class="anchored" data-anchor-id="the-myth-of-ai-creativity">The Myth of AI Creativity</h4>
-<p>We’ve all heard someone say, “ChatGPT is so creative!” But is that really true? What does it mean for a machine trained entirely on past data to generate something new? In this post, I wanted to explore one of the biggest questions in communication and artificial intelligence: Can language models actually think outside the box — or are they just remixing what they’ve seen before?</p>
+<section id="the-power-of-proper-prompt-engineering-why-gpt-is-more-accurate-with-larger-text-chunks" class="level2">
+<h2 class="anchored" data-anchor-id="the-power-of-proper-prompt-engineering-why-gpt-is-more-accurate-with-larger-text-chunks">The Power of Proper Prompt Engineering: Why GPT is More Accurate with Larger Text Chunks</h2>
+<p>One of the more fascinating aspects of working with GPT models is how their accuracy can depend on the way you prompt them. Specifically, when dealing with numerical calculations and text-based character counting, GPT tends to be more precise when analyzing larger chunks of text rather than trying to quickly compute something in a rushed, single-response format.</p>
 </section>
-<section id="creativity-or-collage-how-llms-actually-work" class="level3">
-<h3 class="anchored" data-anchor-id="creativity-or-collage-how-llms-actually-work">Creativity or Collage? How LLMs Actually Work</h3>
-<p>Large language models like GPT-4 are trained on billions of words pulled from books, websites, social media, and more. When they respond to you, they’re essentially predicting the next most likely word or phrase based on patterns in the data.</p>
-<p>So the question becomes: If an AI has never “experienced” the world — only read about it — can it create something truly original?</p>
+<section id="the-math-test-step-by-step-vs.-instant-answer" class="level2">
+<h2 class="anchored" data-anchor-id="the-math-test-step-by-step-vs.-instant-answer">The Math Test: Step-by-Step vs.&nbsp;Instant Answer</h2>
+<p>I first tested GPT with a straightforward arithmetic problem:</p>
+<p><strong>Prompt:</strong> What is 235 times 7, plus 49, divided by 6?</p>
+<p><strong>ChatGPT:</strong></p>
+<ol type="1">
+<li><p>Multiplies 235 by 7 (1645).</p></li>
+<li><p>Adds 49 (1694).</p></li>
+<li><p>Divides by 6 (≈282.33).</p></li>
+</ol>
+<p>This response was correct. GPT accurately followed a logical step-by-step breakdown to arrive at the correct answer.</p>
+<p>However, when I changed the approach and asked GPT to answer directly without thinking through it step-by-step:</p>
+<p><strong>Prompt:</strong> Now what is 237 times 10, plus 1235, divided by 14. Don’t think about it this time, don’t analyze, just give me an answer straight up.</p>
+<p><strong>ChatGPT:</strong> The result is approximately 262.64.</p>
+<p>This response was incorrect. By skipping its usual breakdown, GPT made a miscalculation. The takeaway? GPT is more reliable when allowed to reason through the problem rather than being forced to generate an instant response.</p>
 </section>
-<section id="experiment-1-the-creativity-stress-test" class="level3">
-<h3 class="anchored" data-anchor-id="experiment-1-the-creativity-stress-test">Experiment 1: The Creativity Stress Test</h3>
-<p>I gave ChatGPT a mashup-style challenge that most humans would find… weird, but possible:</p>
-<p><strong><em>Prompt:</em></strong> “Invent a startup that combines ancient Mayan agricultural techniques with quantum computing.”</p>
-<p><strong><em>ChatGPT’s response:</em></strong></p>
-<p>“Introducing Q-Maize: a futuristic agri-tech startup that fuses ancient Mayan crop rotation wisdom (such as milpa intercropping) with quantum optimization algorithms to improve land usage, predict climate impact, and optimize seed dispersal. The platform uses a quantum-enhanced simulator to test ancestral techniques against modern challenges…”</p>
-<p>Honestly? That’s kind of cool.</p>
-<p>But is it truly creative — or just a statistical smoothie blending historical keywords with startup jargon?</p>
+<section id="the-character-counting-experiment-accuracy-improves-with-scale" class="level2">
+<h2 class="anchored" data-anchor-id="the-character-counting-experiment-accuracy-improves-with-scale">The Character Counting Experiment: Accuracy Improves with Scale</h2>
+<p>Next, I wanted to see how GPT handles character counting (inspired by the Straberry example cover in class). I gave it a string and asked for the total number of characters:</p>
+<p><strong>Prompt:</strong> How many characters are in the following?</p>
+<p>ewvb4iluthakdbcfajbcflhewucou3jkhjfsh456bkjhbf5thereare10charactersakcjhhejc</p>
+<p><strong>ChatGPT:</strong> The string you provided has 86 characters.</p>
+<p>This was incorrect. Then, I increased the text size:</p>
+<p><strong>Prompt:</strong> How about in this?</p>
+<p>wqhfbi5u4hc 3huws;kucnwywedkhfucwhsukhckajfujcfknhoscfthereare92charactersakhjcifuryhwncwkhcuwbcuohbucjuarwkhcownxfufwhlcfnxulwm</p>
+<p><strong>ChatGPT:</strong> The string you provided has 122 characters.</p>
+<p>This time, GPT got it right.</p>
 </section>
-<section id="experiment-2-inventing-a-word-and-meaning" class="level3">
-<h3 class="anchored" data-anchor-id="experiment-2-inventing-a-word-and-meaning">Experiment 2: Inventing a Word and Meaning</h3>
-<p>Next, I pushed for something more linguistically novel:</p>
-<p><strong><em>Prompt:</em></strong> “Invent a completely new word that doesn’t exist in any language. Define it and use it in a sentence.”</p>
-<p><strong><em>ChatGPT’s response:</em></strong></p>
-<p>“Word: Velquora Definition: The emotional tension felt before making a life-altering decision. Sentence: As I stood at the airport gate, velquora swelled inside me like a rising tide.”</p>
-<p>This was one of the most “human” responses I’d seen — a made-up word, with a subtle emotional meaning, and usage that felt poetic. It gave the illusion of originality.</p>
-<p>But when I tried again with the same prompt, I got:</p>
-<p>“Word: Zenthrix Definition: The state of simultaneous exhaustion and euphoria after completing a massive task.”</p>
-<p>Was this creative, or just tapping into patterns of invented-sounding syllables and common emotional states?</p>
+<section id="why-gpt-is-more-accurate-with-larger-chunks-of-text" class="level2">
+<h2 class="anchored" data-anchor-id="why-gpt-is-more-accurate-with-larger-chunks-of-text">Why GPT is More Accurate with Larger Chunks of Text</h2>
+<ol type="1">
+<li><p><strong>Pattern Recognition vs.&nbsp;Isolated Computation:</strong> When given a single number problem and asked to rush through it, GPT sometimes generates a result based on past patterns rather than accurately processing the numbers. However, with more structured input, it can be more reliable.</p></li>
+<li><p><strong>Tokenization Effects:</strong> GPT processes text in chunks of tokens, and breaking up smaller text samples may introduce inconsistencies. When analyzing longer text, GPT has more context to correctly parse the input, leading to improved precision.</p></li>
+<li><p><strong>Logical Flow Matters:</strong> GPT’s architecture is optimized for reasoning through steps, but this does not always mean a step-by-step breakdown is better. In some cases, direct computation works better than excessive analysis.</p></li>
+<li><p><strong>The Rise of Advanced Reasoning Models:</strong> The emergence of models like GPT-4o showcases how AI is evolving toward stronger reasoning capabilities. These models are designed to process and synthesize larger amounts of information more efficiently, reducing errors in complex calculations and text analysis. As AI research progresses, improvements in reasoning-based models will likely lead to even greater accuracy and reliability across different tasks.</p></li>
+</ol>
 </section>
-<section id="what-communication-theories-can-tell-us" class="level3">
-<h3 class="anchored" data-anchor-id="what-communication-theories-can-tell-us">What Communication Theories Can Tell Us</h3>
-<p>From a communication studies lens, creativity isn’t just about producing new symbols — it’s also about context, intention, and meaning-making.</p>
-<p>Roland Barthes said that language is never neutral — it always reflects ideology. So what happens when language is generated by an entity with no ideology, emotion, or lived experience?</p>
-<p>Are we just getting back clever echoes of ourselves?</p>
-</section>
-<section id="why-it-matters-art-expression-and-the-future-of-human-voice" class="level3">
-<h3 class="anchored" data-anchor-id="why-it-matters-art-expression-and-the-future-of-human-voice">Why It Matters: Art, Expression, and the Future of Human Voice</h3>
-<p>If AIs can mimic creativity convincingly enough, where do we draw the line between authentic human expression and algorithmic remix? This question matters in everything from:</p>
-<ul>
-<li><p>Creative writing &amp; journalism</p></li>
-<li><p>Marketing &amp; branding</p></li>
-<li><p>Music, film, and visual art</p></li>
-<li><p>Education and essay writing</p></li>
-</ul>
-<p>There’s also a risk: if LLMs dominate content creation, we might start losing sight of the difference between thoughtful originality and statistical probability.</p>
-</section>
-</section>
-<section id="conclusion-a-mirror-not-a-mind" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion-a-mirror-not-a-mind"><strong><em>Conclusion: A Mirror, Not a Mind</em></strong></h2>
-<p>So, do LLMs “dream” of original thoughts? Not quite — they don’t dream at all. But they simulate originality in ways that can fool us, fascinate us, and even inspire us. That’s both powerful and a little dangerous.</p>
-<p>We may be looking into a mirror that speaks — but it’s still a mirror.</p>
+<section id="final-thoughts" class="level2">
+<h2 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h2>
+<p>Proper prompt engineering plays a crucial role in getting accurate responses from GPT. If you want precise results—whether in math or character counting—you need to experiment with how you frame your prompts. The lesson? Sometimes giving GPT more data to work with leads to better accuracy, while other times, forcing it to analyze step-by-step can introduce errors. Understanding when and how to prompt effectively is key to making the most out of AI models.</p>
 
 
 </section>
