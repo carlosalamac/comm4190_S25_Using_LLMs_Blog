@@ -1,8 +1,8 @@
 ---
-title: About
-image: profile.jpg
+title: Carlos Lama
+image: profilepic.png
 about:
   template: jolla
 ---
 
-About this blog
+Hi my name is Carlos, I'm currently a sophomore at Penn and I write on anything that a (non tech background) student finds interesting in LLM's.
