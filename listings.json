@@ -2,7 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/Can AI Mirror the Logic of Misinformation?/index.html",
+      "/posts/Can AI Mirror the Logic of Misinformation/index.html",
       "/posts/Can AI Write Campaign Speeches for Both Sides/index.html",
       "/posts/GPT Deep Research. The Future of LLMs Isn’t Chatting—It’s Thinking/index.html",
       "/posts/Can AI Argue Against Its Own Values/index.html",
@@ -21,10 +21,10 @@
       "/posts/Can AI Be Fooled by Optical Illusions-A Visual Experiment/index.html",
       "/posts/Using AI to Decode a 19th-Century Automatic Writing/index.html",
       "/posts/Gemini Flash and the Next Wave of Visual AI/index.html",
+      "/posts/What Happens When You Give AI the Wrong Prompt/index.html",
       "/posts/Are LLMs Competitive-What They Think of Each Other/index.html",
       "/posts/The Power of Proper Prompt Engineering/index.html",
-      "/posts/Why AI Struggles with Text in Generated Images/index.html",
-      "/posts/What Happens When You Give AI the Wrong Prompt/index.html"
+      "/posts/Why AI Struggles with Text in Generated Images/index.html"
     ]
   }
 ]
