@@ -2,8 +2,9 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/Can AI Write Campaign Speeches for Both Sides?/index.html",
+      "/posts/Can AI Write Campaign Speeches for Both Sides/index.html",
       "/posts/GPT Deep Research. The Future of LLMs Isn’t Chatting—It’s Thinking/index.html",
+      "/posts/Can AI Argue Against Its Own Values/index.html",
       "/posts/Testing Irony and Sarcasm Detection in ChatGPT/index.html",
       "/posts/GPT, Make Me a Game/index.html",
       "/posts/When a New LLM Called Itself ChatGPT Introduction/index.html",
@@ -13,10 +14,16 @@
       "/posts/Testing AI’s Ability to ‘Think’ Beyond Its Training/index.html",
       "/posts/What Happens When LLMs Start Creating Their Own Codecs/index.html",
       "/posts/Grok Unpacked/index.html",
+      "/posts/Truth or Hallucination/index.html",
+      "/posts/Does Uncensored AI Lead to More Honest Conversations/index.html",
+      "/posts/How LLMs Handle Hypotheticals and Ethical Limits/index.html",
+      "/posts/Can AI Be Fooled by Optical Illusions-A Visual Experiment/index.html",
       "/posts/Using AI to Decode a 19th-Century Automatic Writing/index.html",
       "/posts/Gemini Flash and the Next Wave of Visual AI/index.html",
+      "/posts/Are LLMs Competitive-What They Think of Each Other/index.html",
       "/posts/The Power of Proper Prompt Engineering/index.html",
-      "/posts/Why AI Struggles with Text in Generated Images/index.html"
+      "/posts/Why AI Struggles with Text in Generated Images/index.html",
+      "/posts/What Happens When You Give AI the Wrong Prompt/index.html"
     ]
   }
 ]
